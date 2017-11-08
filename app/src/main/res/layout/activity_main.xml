@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border">
+        <LinearLayout
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:layout_weight="0.25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#FFF"
+                android:orientation="vertical"
+                android:layout_weight="0.25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical|start"
+                    android:layout_marginStart="6dp"
+                    android:text="Seu Nome"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+            <LinearLayout
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:layout_weight="0.25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical|start"
+                    android:layout_marginStart="6dp"
+                    android:text="Moedas: 150"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="#0000FF"
+            android:orientation="horizontal"
+            android:layout_width="140dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#FFF"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Shop"
+                    android:id="@+id/shop" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="#FFF"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ConF"
+                    android:id="@+id/config" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:background="#FFFFFE"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:rowCount="8">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:layout_height="wrap_content"
+            android:text="Cartão"
+            android:id="@+id/card" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/border2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/vocabulary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vocabulário" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/review"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Revisão" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
