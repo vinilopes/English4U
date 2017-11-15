@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 
+
 public class MainActivity extends AppCompatActivity {
     Button buttonVocabulary;
     Button buttonReview;
@@ -15,12 +16,28 @@ public class MainActivity extends AppCompatActivity {
     Button buttonShop;
     Button buttonConfig;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+        buttonConfig = (Button) findViewById(R.id.config);
+        buttonConfig.setOnClickListener(new OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        PopUpConfig.class);
+                startActivity(myIntent);
+            }
+        });
+
         buttonVocabulary = (Button) findViewById(R.id.vocabulary);
+
 
         //VOCABULÁRIO
         buttonVocabulary.setOnClickListener(new OnClickListener() {
@@ -45,8 +62,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //CARTÃO
+        //CARTÃO1
         buttonCard = (Button) findViewById(R.id.card);
+        buttonCard.setOnClickListener(new OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        solvecard.class);
+                startActivity(myIntent);
+            }
+        });
+
+        //CARTÃO2
+        buttonCard = (Button) findViewById(R.id.card2);
+        buttonCard.setOnClickListener(new OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        solvecard.class);
+                startActivity(myIntent);
+            }
+        });
+        //CARTÃO3
+        buttonCard = (Button) findViewById(R.id.card3);
+        buttonCard.setOnClickListener(new OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        solvecard.class);
+                startActivity(myIntent);
+            }
+        });
+        //CARTÃO4
+        buttonCard = (Button) findViewById(R.id.card4);
         buttonCard.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
