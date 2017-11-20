@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import db.Create;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //Criação do bd
+        new Create().createTable();
 
         buttonConfig = (Button) findViewById(R.id.config);
         buttonConfig.setOnClickListener(new OnClickListener() {

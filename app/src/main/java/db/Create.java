@@ -2,33 +2,37 @@ package db;
 
 import android.database.sqlite.SQLiteDatabase;
 
+import java.io.Console;
+
 
 public class Create {
 
-    public void createTable() {
 
-        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
-        db.execSQL("CREATE TABLE IF NOT EXISTS WordsEN ( id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, cdtema INTEGER)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS WordsPT ( id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, cdtema INTEGER, cdtranslate INTEGER )");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Weather',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Fog',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Foggy',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Snow',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Snowy',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Light',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Cool',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Cold',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Hot',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Warm',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Temperature',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Sunshine',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Overcast',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Rain',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Rainy',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Wind',1) ");
-        db.execSQL("INSERT INTO WordsEN ( id, nome , cdtema)VALUES('','Windy',1) ");
-        //db.execSQL("INSERT INTO WordsPT ( id, nome, cdtema, cdtranslate)VALUES(,'Clima',1,1) ");
+    public Create(){
+        createWordsEnglishTable(1,
+                                "Weather, Fog, Foggy, Snow, Snowy, Light, Cool, Cold, Hot, Warm, Temperature, Sunshine, Overcast, Rain, Rainy, Wind, Windy",
+                                "Clima, Neblina, Com Neblina, Neve, Com neve, Claro, Fresco, Frio, Quente, Morno, Temperatura, Sol, Nublado, Chuva, Chuvoso, Vento, Com vento",
+                                1);
     }
 
 
+    public void createWordsEnglishTable(int card, String words,  String translate, int theme) {
+        int x;
+
+
+        //db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_CARD);
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        db.execSQL("CREATE TABLE IF NOT EXISTS WordsEN ( cod INTEGER PRIMARY KEY NOT NULL, nome TEXT, cdtema,  cdcard INTEGER, numerros)");
+
+
+        for (x=0;x<16;x++){
+            db.execSQL("INSERT INTO WordsEN ( cod, nome , cdtema, cdcard)VALUES(1,'Weather',1, 1) ");
+        }
+
+
+        //db.execSQL("INSERT INTO WordsPT ( cod, nome, cdtema, cdcard, cdtranslate)VALUES(,'Clima',1, 1,1, 1) ");
+    }
+
 }
+
+

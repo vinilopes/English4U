@@ -2,7 +2,7 @@ package db;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import gm.crudexample.Pessoa;
+//import gm.crudexample.Pessoa;
 
 /**
  * Created by Gilian Marques on 28/09/2017.
@@ -10,7 +10,7 @@ import gm.crudexample.Pessoa;
 
 public class Delete {
 
-
+  /*
     public void removerTabela() {
 
         SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
@@ -25,7 +25,7 @@ public class Delete {
         String query = "UID = '" + pessoa.getUID() + "'";
         return db.delete(MainDB.TABELA_PESSOA, query, null) > 0;
 
-    }
+    }*/
 
 
 }

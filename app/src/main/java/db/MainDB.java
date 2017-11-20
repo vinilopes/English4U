@@ -3,6 +3,8 @@ package db;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import acgkv.english4u.MyApp;
+
 public class MainDB extends SQLiteOpenHelper {
 
     private static String NOME_DB = "E4U";

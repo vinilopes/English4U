@@ -54,7 +54,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="#000"
                         android:text="Cat"
-                        android:textSize="40dp"/>
+                        android:textSize="40dp"
+                        android:id="@+id/englishword"/>
 
                 </LinearLayout>
                 <LinearLayout

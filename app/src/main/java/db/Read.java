@@ -11,7 +11,7 @@ public class Read {
     public ArrayList<Word> getPessoas() {
 
         SQLiteDatabase db = MainDB.getInstancia().getReadableDatabase();
-        String query = "SELECT * FROM " + MainDB.TB_CARD;
+        String query = "SELECT * FROM " + MainDB.TB_CARD + " WHERE cdcard = 1";
         ArrayList<Word> words = new ArrayList<>();
         Cursor c = db.rawQuery(query, null);
 

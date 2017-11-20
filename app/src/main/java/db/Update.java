@@ -3,14 +3,14 @@ package db;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
-import gm.crudexample.Pessoa;
+//import gm.crudexample.Pessoa;
 
 /**
  * Created by Gilian Marques on 28/09/2017.
  */
 
 public class Update {
-
+/*
     public boolean addPessoa(Pessoa pessoa) {
 
         SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
@@ -42,6 +42,6 @@ public class Update {
         return db.update(MainDB.TB_CARD, cv, where, null) > 0;
 
     }
-
+*/
 
 }
