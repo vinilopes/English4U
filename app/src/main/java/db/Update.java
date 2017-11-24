@@ -25,23 +25,21 @@ public class Update {
         return db.insert(MainDB.TABELA_PESSOA, null, cv) != -1;
 
     }
-
-    public boolean updatePessoa(Pessoa pessoa) {
+*/
+    public boolean updateWord(WordEN word) {
 
         SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put("UID", pessoa.getUID());
-        cv.put("NOME", pessoa.getNome());
-        cv.put("IDADE", pessoa.getIdade());
-        cv.put("PESO", pessoa.getPeso());
-        cv.put("DEFICIENCIA", pessoa.isDeficiente());
+        cv.put("cod", word.getCod());
+        cv.put("numerros", word.getNumErros());
 
-        String where = "UID = '" + pessoa.getUID() + "'";
+
+        String where = "cod = '" + word.getCod() + "'";
 
         return db.update(MainDB.TB_CARD, cv, where, null) > 0;
 
     }
-*/
+
 
 }

@@ -1,32 +1,36 @@
 package acgkv.english4u;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+import java.util.Random;
 
 import db.Read;
-import db.Word;
+import db.Update;
+import db.WordEN;
+import db.WordPT;
 
 public class solvecard extends AppCompatActivity {
 
     Button ok;
     ProgressBar bar;
-    Word words;
+    WordEN wordsEN;
+    WordPT wordsPT;
+    Random rand = new Random();
+    int numberOfButton;
     int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solvecard);
-        getWords(0);
+        getWordsEN(0);
+        getWordsPT();
 
 
 
@@ -37,17 +41,59 @@ public class solvecard extends AppCompatActivity {
 
              bar = (ProgressBar)   findViewById(R.id.progress);
                 bar.setProgress(bar.getProgress() + 10);
-                getWords(i++);
+               // checkAnswer();
+                if(i<16){
+                getWordsEN(i++);
+                getWordsPT();
+                }else{
+                //tela de pontuação
+                }
             }
         });
     }
 
-    private void getWords(int card){
-        TextView englishWord = (TextView) findViewById(R.id.englishword);
-        ArrayList<Word> mWords = new Read().getPessoas();
+    private void checkAnswer() {
+        //verifica respota
+        new Update().updateWord(wordsEN);
+    }
 
-        words = mWords.get(card);
-        englishWord.setText(words.getNome());
+
+
+    private void getWordsEN(int card){
+        TextView englishWord = (TextView) findViewById(R.id.englishword);
+        numberOfButton = rand.nextInt(6);
+
+        String buttonID = "b" + numberOfButton;
+        int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
+        Button englishTranslate = ((Button) findViewById(resID));
+
+        ArrayList<WordEN> mWords = new Read().getWordsEN();
+
+        wordsEN = mWords.get(card);
+        englishWord.setText(wordsEN.getNome());
+        englishTranslate.setText(wordsEN.getTranslate());
+
+    }
+
+    private void getWordsPT(){
+        int x;
+        int y=0;
+        String buttonID;
+        TextView englishWord = (TextView) findViewById(R.id.b1);
+        ArrayList<WordPT> mWords = new Read().getWordsPT();
+
+        for (x=0; x<6; x++) {
+
+
+            buttonID = "b" + x;
+            if (x != numberOfButton) {
+                int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
+                Button ptWords = ((Button) findViewById(resID));
+                wordsPT = mWords.get(y);
+                ptWords.setText(wordsPT.getWord());
+                y++;
+            }
+        }
 
     }
 }

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Criação do bd
-        new Create().createTable();
+        new Create();
 
         buttonConfig = (Button) findViewById(R.id.config);
         buttonConfig.setOnClickListener(new OnClickListener() {
