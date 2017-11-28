@@ -13,17 +13,22 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".vocabulary" />
-        <activity android:name=".PopUpConfig"
-            android:theme="@style/configTheme">
-        </activity>
+        <activity
+            android:name=".PopUpConfig"
+            android:theme="@style/configTheme" />
         <activity android:name=".review" />
         <activity android:name=".shop" />
         <activity android:name=".solvecard" />
-        <activity android:name=".register"></activity>
+        <activity android:name=".register" />
+        <activity
+            android:name=".PopupSolveCard"
+            android:theme="@style/configTheme"/>
+        <activity android:name=".Score"></activity>
     </application>
 
 </manifest>

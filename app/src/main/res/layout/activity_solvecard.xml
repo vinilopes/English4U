@@ -19,178 +19,314 @@
 
             </LinearLayout>
 
-            <LinearLayout
-            android:background="#FFF"
-            android:orientation="vertical"
-            android:layout_weight="0.06"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_width="match_parent">
+            android:layout_weight="0.06"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.07"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:background="#FFF"
-                    android:orientation="vertical"
-                    android:layout_weight="0.07"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:gravity="center">
-                    <ProgressBar
-                        android:id="@+id/progress"
-                        style="@android:style/Widget.ProgressBar.Horizontal"
-                        android:layout_width="232dp"
-                        android:layout_height="wrap_content"
-                        android:progress="0"
-                        android:progressDrawable="@drawable/progress"
-                        />
-
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s1">
                 </LinearLayout>
+
                 <LinearLayout
-                    android:background="#FFF"
-                    android:orientation="vertical"
-                    android:layout_weight="0.06"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:gravity="center">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:text="Cat"
-                        android:textSize="40dp"
-                        android:id="@+id/englishword"/>
-
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s2">
                 </LinearLayout>
                 <LinearLayout
-                    android:background="#0000CD"
-                    android:orientation="horizontal"
-                    android:layout_weight="0.05"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                        <LinearLayout
-                        android:background="#FFF"
-                        android:orientation="vertical"
-                        android:layout_weight="0.06"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:gravity="center">
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Cachorro"
-                                    android:id="@+id/b1"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Gato"
-                                    android:id="@+id/b2"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Pão"
-                                    android:id="@+id/b4"
-                                    />
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:background="#FFF"
-                            android:orientation="vertical"
-                            android:layout_weight="0.06"
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
-                            android:gravity="center">
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Lebre"
-                                    android:id="@+id/b0"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Chapéu"
-                                    android:id="@+id/b3"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:orientation="vertical"
-                                android:layout_weight="0.06"
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent"
-                                android:gravity="center"
-                                android:padding="6dp">
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Boina"
-                                    android:id="@+id/b5"
-                                    />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:orientation="vertical"
-                    android:layout_weight="0.06"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:weightSum="1">
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round_button"
-                        android:layout_weight="0.43"
-                        android:text="OK"
-                        android:id="@+id/ok"/>
-
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s3">
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s4">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s5">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s6">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s7">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s8">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s9">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s10">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s11">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s12">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s13">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s14">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s15">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s16">
+                </LinearLayout>
+
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.06"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/englishword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cat"
+                    android:textColor="#000"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="#0000CD"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.06"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Cachorro" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Gato" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Pão" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.06"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Lebre" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Chapéu" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Boina" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.06"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.43"
+                    android:background="@drawable/round_button"
+                    android:text="OK" />
+
+            </LinearLayout>
+        </LinearLayout>
             <LinearLayout
             android:background="#FFF"
             android:orientation="vertical"
