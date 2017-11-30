@@ -28,8 +28,8 @@
                     android:orientation="vertical"
                     android:gravity="center_vertical|start"
                     android:layout_marginStart="6dp"
-                    android:text="Seu Nome"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/username"/>
 
             </LinearLayout>
             <LinearLayout
@@ -44,8 +44,8 @@
                     android:orientation="vertical"
                     android:gravity="center_vertical|start"
                     android:layout_marginStart="6dp"
-                    android:text="Moedas: 150"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:id="@+id/coins"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -128,7 +128,7 @@
                         android:gravity="center"
                         android:layout_weight="0.06">
                         <Button
-                            android:id="@+id/card"
+                            android:id="@+id/card1"
                             android:layout_width="90dp"
                             android:layout_height="90dp"
                             android:text="1" />
@@ -138,7 +138,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:id="@+id/starsBar1">
                         <LinearLayout
                             android:background="#FFF"
                             android:layout_width="match_parent"
@@ -150,7 +151,7 @@
                             android:background="#FFF"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.65"
+                            android:layout_weight="0.64"
                             android:gravity="center">
                             <LinearLayout
                                 android:background="#55a44e"
@@ -252,13 +253,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="2" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar2">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_2">
 
-                            <Button
-                                android:id="@+id/card2"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="2" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_2">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_2">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -311,13 +379,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card3"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="3" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="3" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar3">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_3">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_3">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_3">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -363,7 +498,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
                         android:background="#FFF"
-                        android:orientation="horizontal"></LinearLayout>
+                        android:orientation="horizontal">
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -372,13 +508,79 @@
                         android:layout_weight="0.1"
                         android:background="#FFF"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:background="#FFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="0.06">
+                            <Button
+                                android:id="@+id/card4"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:text="4" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:background="#AAA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:id="@+id/starsBar4">
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center">
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.64"
+                                android:gravity="center">
+                                <LinearLayout
+                                    android:background="#55a44e"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.65"
+                                    android:gravity="center"
+                                    android:layout_marginRight="2dp"
+                                    android:id="@+id/bar1_4">
 
-                        <Button
-                            android:id="@+id/card4"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:text="4" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#55a44e"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.65"
+                                    android:gravity="center"
+                                    android:layout_marginRight="2dp"
+                                    android:id="@+id/bar2_4">
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#476268"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.65"
+                                    android:gravity="center"
+                                    android:layout_marginRight="2dp"
+                                    android:id="@+id/bar3_4">
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center">
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -437,13 +639,79 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="5" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar5">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.21"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_5">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="5" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_5">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_5">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -496,13 +764,79 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card6"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="6" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar6">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.21"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_6">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="6" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_6">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_6">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -555,13 +889,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="7" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card7"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="7" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar7">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.21"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_7">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_7">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_7">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -621,13 +1022,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="8" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card8"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="8" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar8">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_8">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_8">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_8">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -680,13 +1148,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="9" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card9"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="9" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar9">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_9">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_9">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_9">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -734,13 +1269,80 @@
                     android:layout_weight="0.1"
                     android:background="#FFF"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/card"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:text="10" />
+                    <LinearLayout
+                        android:background="#FFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.06">
+                        <Button
+                            android:id="@+id/card10"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:text="10" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#AAA"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/starsBar10">
+                        <LinearLayout
+                            android:background="#FFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+                        </LinearLayout>
+                        <LinearLayout
+                            android:background="#FFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.64"
+                            android:gravity="center">
+                            <LinearLayout
+                                android:background="#55a44e"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.65"
+                                android:gravity="center"
+                                android:layout_marginRight="2dp"
+                                android:id="@+id/bar1_10">
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#55a44e"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.65"
+                                android:gravity="center"
+                                android:layout_marginRight="2dp"
+                                android:id="@+id/bar2_10">
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#476268"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.65"
+                                android:gravity="center"
+                                android:layout_marginRight="2dp"
+                                android:id="@+id/bar3_10">
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:background="#FFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -798,13 +1400,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="11" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card11"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="11" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar11">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_11">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_11">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_11">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -857,13 +1526,80 @@
                             android:layout_weight="0.1"
                             android:background="#FFF"
                             android:gravity="center"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/card"
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:text="12" />
+                            <LinearLayout
+                                android:background="#FFF"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="0.06">
+                                <Button
+                                    android:id="@+id/card12"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:text="12" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="#AAA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/starsBar12">
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.39"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar1_12">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#55a44e"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar2_12">
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:background="#476268"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.65"
+                                        android:gravity="center"
+                                        android:layout_marginRight="2dp"
+                                        android:id="@+id/bar3_12">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:background="#FFF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center">
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout

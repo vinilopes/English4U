@@ -14,13 +14,14 @@
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
         <LinearLayout
-            android:background="#000"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@drawable/border">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#000"
                 android:text="SHOP"/>
 
         </LinearLayout>
@@ -35,7 +36,7 @@
                 android:layout_height="match_parent"
                 >
                 <LinearLayout
-                    android:background="#FF0000"
+                    android:background="#FFF"
                     android:layout_width="match_parent"
                     android:layout_height="200px"></LinearLayout>
                 <LinearLayout
@@ -43,7 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200px"></LinearLayout>
                 <LinearLayout
-                    android:background="#FF0000"
+                    android:background="#FFF"
                     android:layout_width="match_parent"
                     android:layout_height="200px"></LinearLayout>
                 <LinearLayout
@@ -51,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200px"></LinearLayout>
                 <LinearLayout
-                    android:background="#FF0000"
+                    android:background="#FFF"
                     android:layout_width="match_parent"
                     android:layout_height="200px"></LinearLayout>
                 <LinearLayout

@@ -9,9 +9,11 @@ public class MainDB extends SQLiteOpenHelper {
 
     private static String NOME_DB = "E4U";
     private static int VERSAO_DB = 1;
-    public static String TB_CARD= "WordsEN";
+    public static String TB_ENWORDS= "WordsEN";
     public static String TB_PTWORDS= "WordsPT";
     public static String TB_WORDSLEARNED= "WordsLearned";
+    public static String TB_CARD= "Cards";
+    public static String TB_USER= "User";
 
     private static MainDB instancia;
 

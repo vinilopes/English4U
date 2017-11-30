@@ -33,11 +33,43 @@ public class Update {
 
         cv.put("cod", word.getCod());
         cv.put("numerros", word.getNumErros());
-
+        //cv.put("finish", word.getFinish());
 
         String where = "cod = '" + word.getCod() + "'";
 
+        return db.update(MainDB.TB_ENWORDS, cv, where, null) > 0;
+
+    }
+
+    public boolean updateCard(Card card) {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("cod", card.getCod());
+        cv.put("name", "FODASEESSAMERDA");
+        cv.put("score", card.getScore());
+
+
+        String where = "cod = " + card.getCod();
+
         return db.update(MainDB.TB_CARD, cv, where, null) > 0;
+
+    }
+
+    public boolean updateUser(User user) {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        int coins = new Read().getUser().getCoins();
+        cv.put("cod", user.getCod());
+        cv.put("coins", (user.getCoins() + coins ));
+
+
+        String where = "cod = " + user.getCod();
+
+        return db.update(MainDB.TB_USER, cv, where, null) > 0;
 
     }
 

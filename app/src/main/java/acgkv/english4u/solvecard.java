@@ -28,18 +28,22 @@ public class solvecard extends AppCompatActivity {
     Random rand = new Random();
     boolean isCorrect;
     boolean isPressed;
-    int numberOfButton;
+    int numberOfButton, card;
     String textButton;
     int i = 1;
+    int [] results = new int [17];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solvecard);
+        Bundle extras = getIntent().getExtras();
+        card = extras.getInt("card");
         getWordsEN(0);
         getWordsPT();
         disableSend();
 
         /*BUTONS SELECT*/
+
         selectorsb0 = (Button) findViewById(R.id.b0 );
         selectorsb0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -99,13 +103,6 @@ public class solvecard extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
         //Botao OK
         ok = (Button) findViewById(R.id.ok);
         ok.setOnClickListener(new View.OnClickListener() {
@@ -122,8 +119,10 @@ public class solvecard extends AppCompatActivity {
                     LinearLayout status = (LinearLayout) findViewById(idStatus);
                     if(isCorrect){
                         status.setBackgroundColor(Color.parseColor("#2AC531") );
+                        results[i] = 1;
                     }else{
                         status.setBackgroundColor(Color.parseColor("#C70039") );
+                        results[i] = 0;
                     }
                     buttonsNormalize(67);
                 }
@@ -132,8 +131,9 @@ public class solvecard extends AppCompatActivity {
                     getWordsEN(i++);
                     getWordsPT();
                 }else{
-                    Intent myIntent = new Intent(solvecard.this,
-                            Score.class);
+                    Intent myIntent = new Intent(solvecard.this, Score.class);
+                    myIntent.putExtra("result", results);
+                    myIntent.putExtra("card", card);
                     startActivity(myIntent);
                 }
             }

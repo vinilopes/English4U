@@ -17,6 +17,7 @@ public class WordEN {
     private String translate;
     private int cdtema;
     private int numErros;
+    private int finish;
 
 
     public String getNome() {
@@ -57,5 +58,13 @@ public class WordEN {
 
     public void setNumErros(int numErros) {
         this.numErros = numErros;
+    }
+
+    public int getFinish() {
+        return finish;
+    }
+
+    public void setFinish(int finish) {
+        this.finish = finish;
     }
 }
