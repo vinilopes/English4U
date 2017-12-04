@@ -44,6 +44,7 @@ public class solvecard extends AppCompatActivity {
         disableSend();
         buttonsNormalizeAll();
         final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.yes);
+        final MediaPlayer mp2 = MediaPlayer.create(getApplicationContext(), R.raw.no);
 
         /*BUTONS SELECT*/
 
@@ -123,10 +124,15 @@ public class solvecard extends AppCompatActivity {
                     if(isCorrect){
                         status.setBackgroundColor(Color.parseColor("#2AC531") );
                         results[(i-1)] = 1;
-                        mp.start();
+                        if(new Read().audioEnable() == 1) {
+                            mp.start();
+                        }
                     }else{
                         status.setBackgroundColor(Color.parseColor("#C70039") );
                         results[(i-1)] = 0;
+                        if(new Read().audioEnable() == 1) {
+                            mp2.start();
+                        }
                     }
                     buttonsNormalize(67);
                 }

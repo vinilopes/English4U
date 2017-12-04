@@ -156,6 +156,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonCard11 = (Button) findViewById(R.id.card11);
+        buttonCard11.setOnClickListener(new OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this, solvecard.class);
+                myIntent.putExtra("card", 11 );
+                startActivity(myIntent);
+            }
+        });
+
 
         //CONFIG
         buttonConfig = (Button) findViewById(R.id.config);
@@ -217,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
         int scoreB7 = new Read().viewProgress(Integer.parseInt(buttonCard7.getText().toString()));
         int scoreB8 = new Read().viewProgress(Integer.parseInt(buttonCard8.getText().toString()));
         int scoreB9 = new Read().viewProgress(Integer.parseInt(buttonCard9.getText().toString()));
-        int scoreB10 = new Read().viewProgress(Integer.parseInt(buttonCard10.getText().toString()));
+        int scoreB11 = new Read().viewProgress(Integer.parseInt(buttonCard11.getText().toString()));
         Button review = (Button) findViewById(R.id.review);
         buttonCard1.setEnabled(true);
         buttonCard2.setEnabled(false);
@@ -229,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
         buttonCard8.setEnabled(false);
         buttonCard9.setEnabled(false);
         buttonCard10.setEnabled(false);
+        buttonCard11.setEnabled(false);
         review.setEnabled(false);
 
         if(scoreB1 != 0 ) {
@@ -251,7 +263,10 @@ public class MainActivity extends AppCompatActivity {
         if(scoreB8 != 0 && scoreB9 != 0){
             buttonCard10.setEnabled(true);
         }
-
+        int comprado = new Read().getCardStatus(11).getBuy();
+        if ( comprado == 1){
+            buttonCard11.setEnabled(true);
+        }
 
     }
 
@@ -260,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout bar1, bar2, bar3;
 
 
-        for (x=1;x<11;x++) {
+        for (x=1;x<12;x++) {
             int idCard = getResources().getIdentifier("card" + x, "id", getPackageName());
 
             score = new Read().getCardStatus(x).getScore();

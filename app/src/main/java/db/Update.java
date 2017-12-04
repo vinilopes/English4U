@@ -73,5 +73,50 @@ public class Update {
 
     }
 
+    public boolean updateUser2(User user) {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("cod", user.getCod());
+        cv.put("coins", (user.getCoins() ));
+
+
+        String where = "cod = " + user.getCod();
+
+        return db.update(MainDB.TB_USER, cv, where, null) > 0;
+
+    }
+
+
+    public boolean CardShop(int cod) {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("cod", cod);
+        cv.put("name", "card");
+        cv.put("buy", 1);
+
+
+        String where = "cod = " + cod;
+
+        return db.update(MainDB.TB_CARD, cv, where, null) > 0;
+
+    }
+
+    public boolean Audio(int enable) {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("enable", enable);
+
+        String where = "";
+
+        return db.update(MainDB.TB_CONFIGAUDIO, cv, where, null) > 0;
+
+    }
+
 
 }

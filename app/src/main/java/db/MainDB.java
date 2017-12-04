@@ -14,6 +14,7 @@ public class MainDB extends SQLiteOpenHelper {
     public static String TB_WORDSLEARNED= "WordsLearned";
     public static String TB_CARD= "Cards";
     public static String TB_USER= "User";
+    public static String TB_CONFIGAUDIO= "Audio";
 
     private static MainDB instancia;
 

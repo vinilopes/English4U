@@ -2,6 +2,7 @@ package acgkv.english4u;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,8 @@ public class review extends AppCompatActivity {
         ArrayList<WordEN> mWords;
         int [] results = new int [17];
         int [] cods = new int [5];
+       // final MediaPlayer mpp = MediaPlayer.create(getApplicationContext(), R.raw.yes);
+      //  final MediaPlayer mpp2 = MediaPlayer.create(getApplicationContext(), R.raw.no);
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -120,9 +123,15 @@ public class review extends AppCompatActivity {
                         if(isCorrect){
                             status.setBackgroundColor(Color.parseColor("#2AC531") );
                             results[(i-1)] = 1;
+                            if(new Read().audioEnable() == 1) {
+                               // mpp.start();
+                            }
                         }else{
                             status.setBackgroundColor(Color.parseColor("#C70039") );
                             results[(i-1)] = 0;
+                            if(new Read().audioEnable() == 1) {
+                              //  mpp2.start();
+                            }
                         }
                         cods[(i-1)] = wordsEN.getCod();
                         buttonsNormalize(67);

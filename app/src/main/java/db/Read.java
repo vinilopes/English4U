@@ -161,6 +161,20 @@ public class Read {
         return score;
     }
 
+    public int  audioEnable(){
+        int enable = 1;
+        SQLiteDatabase db = MainDB.getInstancia().getReadableDatabase();
+        String query = "SELECT * FROM " + MainDB.TB_CONFIGAUDIO ;
+        Cursor c = db.rawQuery(query, null);
+
+        if (c.moveToFirst()) {
+            enable = c.getInt(0);
+        }
+
+        c.close();
+        return enable;
+    }
+
     public  User getUser(){
         SQLiteDatabase db = MainDB.getInstancia().getReadableDatabase();
         String query = "SELECT * FROM " + MainDB.TB_USER + " WHERE cod = 0";
@@ -183,6 +197,7 @@ public class Read {
             card.setCod(c.getInt(0));
             card.setName(c.getString(1));
             card.setScore(c.getInt(2));
+            card.setBuy(c.getInt(3));
         }
         return card;
     }

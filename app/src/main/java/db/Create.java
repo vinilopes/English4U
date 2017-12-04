@@ -10,15 +10,18 @@ public class Create {
         db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_USER);
         db.execSQL("CREATE TABLE IF NOT EXISTS User ( cod INTEGER PRIMARY KEY NOT NULL, name TEXT, coins INTEGER)");
         db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_CARD);
-        db.execSQL("CREATE TABLE IF NOT EXISTS Cards ( cod INTEGER PRIMARY KEY NOT NULL, name TEXT, score INTEGER)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Cards ( cod INTEGER PRIMARY KEY NOT NULL, name TEXT, score INTEGER, buy INTEGER)");
         db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_ENWORDS);
         db.execSQL("CREATE TABLE IF NOT EXISTS WordsEN ( cod INTEGER PRIMARY KEY NOT NULL, word TEXT, translate TEXT, cdtema INTEGER,  cdcard INTEGER, numerros INTEGER, finish INTEGER )");
         db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_PTWORDS);
         db.execSQL("CREATE TABLE IF NOT EXISTS WordsPT ( cdtheme INTEGER, word TEXT)");
+        db.execSQL("DROP TABLE IF EXISTS " + MainDB.TB_CONFIGAUDIO);
+        db.execSQL("CREATE TABLE IF NOT EXISTS Audio ( enable INTEGER)");
 
 
         createProfile(userName);
         createCards();
+        createAudioConfig();
 
         createWordsEnglishTable(1,
                                 "Weather, Fog, Foggy, Snow, Snowy, Light, Cool, Cold, Hot, Warm, Temperature, Sunshine, Overcast, Rain, Rainy, Wind",
@@ -27,7 +30,7 @@ public class Create {
         createWordsPortugueseTable (1,
                                     "Temperatura, Neve, Castelo, Nevoeiro, Viagem, Chuva, Sapo, Pastel, Lugar, Pesado, Chuva, Sol, Lua, Calor, Frio,  Claro, Luz, Com chuva, com sol, com tempestade, com nuvem, Escuro, luminária, tempo,  Ventania, Frio, morno, abafado, Abafado, Gelo, Certo, Derreter, Arvore, Verão ,Ensolarado, Raio, Por do Sol, Ensolarado, Chuvoso, Gelado, Temporal, Nublado, Sorvete");
         createWordsEnglishTable(2,
-                                "Trip, Away, Terrific, Fantastic, To Travel, To Enjoy, Place, Famous, Hotel, GasLike, Picture, Camping, Fishing, Picnic, Castle, Bonfire",
+                                "Trip, Away, Terrific, Fantastic, To Travel, To Enjoy, Place, Famous, Hotel, Gas, Picture, Camping, Fishing, Picnic, Castle, Bonfire",
                                 "Viagem, Longe, Magnifico, Fantastico, Viajar, Gostar, Lugar, Famoso, Hotel, Gasolina,  Foto, Acampar, Pescar, Piquenique, Castelo, Fogueira",
                                 2);
         createWordsPortugueseTable (2,
@@ -80,6 +83,12 @@ public class Create {
                                 10);
         createWordsPortugueseTable (10,
                                 "Testa, Abraço, Dedo, Prego, Magoar, Doer, Gente, Acidente, Olhos, Faca, Arma, Batom, Fada, Futebol, Nata, Injúria, Imaginação, Perfeição, Sorriso, Barba, Bigode, Mundo, Pensamento, Quebrar, Madeira, Joelho, Canela, Cirurgia, Corte, Queimadura, Preto, Branco, Calça, Sapato, Cicatriz");
+        createWordsEnglishTable(11,
+                                "Friendly Game, Whistle, Stand, Wall, Striker, Shot, Save, Cross, Corner, Draw, Goal, Own Goal, Hat-Trick,  Half Time, Goalkeeper, Offside ",
+                                "Amistoso, Apito, Arquibancada, Barreira, Atacante, Chute, Defesa, Cruzamento, Escanteio, Empate, Gol, Gol Contra, Goleador, Intervalo, Goleiro, Impedimento ",
+                                11);
+        createWordsPortugueseTable (11,
+                                "Lateral, Zagueiro, Ponta, Esquerda, Direita, Verdão, Avanti, Falta, Expulsão, Ficar, Jogar, Golaço, Pulo, Reserva, Banco, Chute, Angulo, Trave, Travessão, Cartão, Amigo, Passe, Bicicleta, Corrida, Carrinho, Carretilha, Pedalada, Campeão, Faixa, Copa, Mundo, Penalização, Placar, Locutor, Narrador, Marcação, Marcador, Equipe, Adversário");
 
     }
 
@@ -89,12 +98,22 @@ public class Create {
         db.execSQL("INSERT INTO User ( cod, name , coins) VALUES(0, '"+name+"', 0) ");
     }
 
+    private void createAudioConfig() {
+
+        SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
+        db.execSQL("INSERT INTO Audio (enable) VALUES(1) ");
+    }
+
     private void createCards() {
         int i;
 
         SQLiteDatabase db = MainDB.getInstancia().getWritableDatabase();
-        for (i=1;i<13;i++){
-            db.execSQL("INSERT INTO Cards ( cod, name , score) VALUES("+i+", 'card', 0) ");
+        for (i=1;i<12;i++){
+            if(i!=11) {
+                db.execSQL("INSERT INTO Cards ( cod, name , score, buy) VALUES(" + i + ", 'card', 0, 1) ");
+            }else{
+                db.execSQL("INSERT INTO Cards ( cod, name , score, buy) VALUES(" + i + ", 'card', 0, 0) ");
+            }
         }
     }
 

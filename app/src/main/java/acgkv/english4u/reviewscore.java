@@ -34,14 +34,18 @@ public class reviewscore extends AppCompatActivity {
             WordEN word = new Read().getWordsENReviewCods(cods[i]);
             word.setFinish(1);
             if(result[i]==1){
-                word.setNumErros(0);
+
                 if(word.getNumErros() == 0){
                     word.setNumErros(0);
                 }else{
                     word.setNumErros((word.getNumErros() - 1));
                 }
+
             }else{
-                word.setNumErros((word.getNumErros() + 1));
+                if(word.getNumErros() < 3){
+                    word.setNumErros((word.getNumErros() + 1));
+                }
+
             }
             new Update().updateWord(word);
         }

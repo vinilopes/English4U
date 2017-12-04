@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 
 import db.MainDB;
+import db.Read;
+import db.Update;
 
 
 public class PopUpConfig extends Activity{
@@ -38,6 +41,24 @@ public class PopUpConfig extends Activity{
                 // Start NewActivity.class
                 Intent myIntent = new Intent(PopUpConfig.this, NameFrame.class);
                 startActivity(myIntent);
+            }
+        });
+
+        Switch buttonAudio = (Switch) findViewById(R.id.switchaudio);
+        final int en = new Read().audioEnable();
+        if( en == 1 ){
+            buttonAudio.setChecked(true);
+        }else{
+            buttonAudio.setChecked(false);
+        }
+        buttonAudio.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                if(en == 1){
+                    new Update().Audio(0);
+                }else {
+                    new Update().Audio(1);
+                }
+
             }
         });
     }

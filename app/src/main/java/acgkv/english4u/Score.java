@@ -1,10 +1,12 @@
 package acgkv.english4u;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import db.Card;
@@ -32,6 +34,9 @@ public class Score extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         result = extras.getIntArray("result");
         int cardPhase = extras.getInt("card");
+        ImageButton star1 = (ImageButton) findViewById(R.id.star1);
+        ImageButton star2 = (ImageButton) findViewById(R.id.star2);
+        ImageButton star3 = (ImageButton) findViewById(R.id.star3);
 
         int p;
         for (int i=0; i<16; i++){
@@ -53,47 +58,54 @@ public class Score extends AppCompatActivity {
                     wordEN.setNumErros(((new Read().getWordENErros(((p * z)+i))) - 1));
                 }
             }else{
-                wordEN.setNumErros(((new Read().getWordENErros(((p * z)+i))) + 1));
+                if(new Read().getWordENErros(((p * z)+i)) < 3){
+                    wordEN.setNumErros(((new Read().getWordENErros(((p * z)+i))) + 1));
+                }
             }
             new Update().updateWord(wordEN);
         }
         int previusScore = new Read().getCardStatus(cardPhase).getScore();
         card.setScore(previusScore);
         user.setCod(0);
-        stars.setText("Sem Estrelas");
+        star1.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
+        star2.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
+        star3.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
         reward.setText("Sem recompensa");
         if(contPonits>0 && contPonits < 10){
             if(previusScore < 1) {
                 card.setScore(1);
                 user.setCoins(5);
-                stars.setText("1 Estrela");
                 reward.setText("5 Moedas");
             }else{
-                stars.setText("1 Estrelas");
                 reward.setText("Obtido");
             }
+            star1.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
+            star2.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
+            star3.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
         }
         if(contPonits>9 && contPonits < 15){
             if(previusScore < 2) {
                 card.setScore(2);
-                user.setCoins(5);
-                stars.setText("2 Estrelas");
+                user.setCoins(10);
                 reward.setText("10 Moedas");
             }else{
-                stars.setText("2 Estrelas");
                 reward.setText("Obtido");
             }
+            star1.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
+            star2.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
+            star3.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_off));
         }
         if(contPonits>14){
             if(previusScore < 3) {
                 card.setScore(3);
                 user.setCoins(20);
-                stars.setText("3 Estrelas");
                 reward.setText("20 Moedas");
             }else {
-                stars.setText("3 Estrelas");
                 reward.setText("Obtido");
             }
+            star1.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
+            star2.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
+            star3.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),android.R.drawable.btn_star_big_on));
         }
 
         card.setCod( extras.getInt("card"));

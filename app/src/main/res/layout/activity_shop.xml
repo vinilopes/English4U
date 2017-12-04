@@ -30,50 +30,65 @@
             android:layout_height="match_parent"
             android:layout_weight="0.2">
             <LinearLayout
-                android:orientation="vertical"
-                android:background="#FFF"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
                 <LinearLayout
-                    android:background="#FFF"
+                    android:background="#000"
                     android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
-                <LinearLayout
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:layout_height="200px"></LinearLayout>
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+                        <Button
 
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:text="F"
+                            android:enabled="false"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:layout_marginLeft="3dp"
+                            android:text="Futebol"/>
 
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#000"
+                                android:text="60 Moedas"
+                                android:gravity="center_vertical"/>
+                            <Button
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:text="$"
+                                android:id="@+id/buy"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
+
+
+
+
         </ScrollView>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

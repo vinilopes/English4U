@@ -2,17 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/borderpopup"
-            android:orientation="vertical">
-        <LinearLayout
-        android:background="#FFF"
-        android:orientation="horizontal"
-        android:layout_weight="1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/borderpopup"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="#FFF"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -24,20 +24,15 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:text="Audio"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="center">
-                <Switch
+                    android:text="Comprar Card:"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/switchaudio"/>
+                    android:textColor="#000"
+                    android:layout_gravity="center"
+                    android:text=" FUTEBOL"
+                    android:id="@+id/cardname"/>
             </LinearLayout>
-
         </LinearLayout>
         <LinearLayout
             android:background="#FFF"
@@ -56,36 +51,33 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:text="Notificações"/>
+                    android:text="60 Moedas"
+                    android:id="@+id/moedas"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="center">
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#FFF"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recomeçar do Zero"
-            android:id="@+id/reset"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:id="@+id/cancel"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comprar"
+                android:id="@+id/buycard"/>
 
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

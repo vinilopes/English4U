@@ -9,6 +9,7 @@ public class Card {
     private int cod;
     private String name;
     private int score;
+    private int buy;
 
 
     public int getCod() {
@@ -33,5 +34,13 @@ public class Card {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public int getBuy() {
+        return buy;
+    }
+
+    public void setBuy(int buy) {
+        this.buy = buy;
     }
 }
