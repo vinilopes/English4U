@@ -2,6 +2,7 @@ package acgkv.english4u;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,9 +39,11 @@ public class solvecard extends AppCompatActivity {
         setContentView(R.layout.activity_solvecard);
         Bundle extras = getIntent().getExtras();
         card = extras.getInt("card");
-        getWordsEN(0);
+        getWordsEN(0, card);
         getWordsPT();
         disableSend();
+        buttonsNormalizeAll();
+        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.yes);
 
         /*BUTONS SELECT*/
 
@@ -119,16 +122,17 @@ public class solvecard extends AppCompatActivity {
                     LinearLayout status = (LinearLayout) findViewById(idStatus);
                     if(isCorrect){
                         status.setBackgroundColor(Color.parseColor("#2AC531") );
-                        results[i] = 1;
+                        results[(i-1)] = 1;
+                        mp.start();
                     }else{
                         status.setBackgroundColor(Color.parseColor("#C70039") );
-                        results[i] = 0;
+                        results[(i-1)] = 0;
                     }
                     buttonsNormalize(67);
                 }
                 if(i<16){
 
-                    getWordsEN(i++);
+                    getWordsEN(i++, card);
                     getWordsPT();
                 }else{
                     Intent myIntent = new Intent(solvecard.this, Score.class);
@@ -170,7 +174,18 @@ public class solvecard extends AppCompatActivity {
           }
         }
     }
-    private void getWordsEN(int card){
+
+    private void buttonsNormalizeAll( ) {
+        Button[] button = new Button[6];
+        for (int i = 0; i < 6; i++) {
+            int id = getResources().getIdentifier("b" + i, "id", getPackageName());
+            button[i] = (Button) findViewById(id);
+        }
+        for (int i = 0; i < 6; i++) {
+                button[i].setBackgroundColor(Color.BLACK);
+        }
+    }
+    private void getWordsEN(int card, int card_real){
         TextView englishWord = (TextView) findViewById(R.id.englishword);
         numberOfButton = rand.nextInt(6);
 
@@ -178,7 +193,7 @@ public class solvecard extends AppCompatActivity {
         int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
         Button englishTranslate = ((Button) findViewById(resID));
 
-        ArrayList<WordEN> mWords = new Read().getWordsEN();
+        ArrayList<WordEN> mWords = new Read().getWordsEN(card_real);
 
         wordsEN = mWords.get(card);
         englishWord.setText(wordsEN.getNome());
@@ -190,8 +205,7 @@ public class solvecard extends AppCompatActivity {
         int x;
         int y=0;
         String buttonID;
-        TextView englishWord = (TextView) findViewById(R.id.b1);
-        ArrayList<WordPT> mWords = new Read().getWordsPT();
+        ArrayList<WordPT> mWords = new Read().getWordsPT(card);
 
         for (x=0; x<6; x++) {
 

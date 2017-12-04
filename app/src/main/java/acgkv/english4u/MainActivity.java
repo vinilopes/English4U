@@ -15,7 +15,7 @@ import db.Read;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button buttonVocabulary;
+    Button buttonVocabulary, buttonCard1, buttonCard2, buttonCard3, buttonCard4, buttonCard5, buttonCard6, buttonCard7, buttonCard8, buttonCard9, buttonCard10, buttonCard11, buttonCard12;
     Button buttonReview;
     Button [] buttonCard = new Button[14];
     Button buttonShop;
@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         //CARDS
         cardGeneretor();
-        Button buttonCard1 = (Button) findViewById(R.id.card1);
-        enableButtons(buttonCard1, 1);
+        buttonCard1 = (Button) findViewById(R.id.card1);
         buttonCard1.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard2 = (Button) findViewById(R.id.card2);
+        buttonCard2 = (Button) findViewById(R.id.card2);
         buttonCard2.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard3 = (Button) findViewById(R.id.card3);
+        buttonCard3 = (Button) findViewById(R.id.card3);
         buttonCard3.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard4 = (Button) findViewById(R.id.card4);
+        buttonCard4 = (Button) findViewById(R.id.card4);
         buttonCard4.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard5 = (Button) findViewById(R.id.card5);
+        buttonCard5 = (Button) findViewById(R.id.card5);
         buttonCard5.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard6 = (Button) findViewById(R.id.card6);
+        buttonCard6 = (Button) findViewById(R.id.card6);
         buttonCard6.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard7 = (Button) findViewById(R.id.card7);
+        buttonCard7 = (Button) findViewById(R.id.card7);
         buttonCard7.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard8 = (Button) findViewById(R.id.card8);
+        buttonCard8 = (Button) findViewById(R.id.card8);
         buttonCard8.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard9 = (Button) findViewById(R.id.card9);
+        buttonCard9 = (Button) findViewById(R.id.card9);
         buttonCard9.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -146,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard10 = (Button) findViewById(R.id.card10);
+        buttonCard10 = (Button) findViewById(R.id.card10);
         buttonCard10.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -157,27 +156,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCard11 = (Button) findViewById(R.id.card11);
-        buttonCard11.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-
-                // Start NewActivity.class
-                Intent myIntent = new Intent(MainActivity.this, solvecard.class);
-                myIntent.putExtra("card", 11 );
-                startActivity(myIntent);
-            }
-        });
-
-        Button buttonCard12 = (Button) findViewById(R.id.card12);
-        buttonCard12.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-
-                // Start NewActivity.class
-                Intent myIntent = new Intent(MainActivity.this, solvecard.class);
-                myIntent.putExtra("card", 12 );
-                startActivity(myIntent);
-            }
-        });
 
         //CONFIG
         buttonConfig = (Button) findViewById(R.id.config);
@@ -226,29 +204,63 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+        enableButtons();
     }
 
-    private void enableButtons(Button buttonCardParameter, int firstButton) {
-        int score = new Read().viewProgress(Integer.parseInt(buttonCardParameter.getText().toString()));
-        if( score != 0 || firstButton == 1){
-            buttonCardParameter.setEnabled(true);
-        }else{
-            for (int x = 1;x<13; x++){
-                
-            }
-            buttonCardParameter.setEnabled(false);
+    private void enableButtons() {
+        int scoreB1 = new Read().viewProgress(Integer.parseInt(buttonCard1.getText().toString()));
+        int scoreB2 = new Read().viewProgress(Integer.parseInt(buttonCard2.getText().toString()));
+        int scoreB3 = new Read().viewProgress(Integer.parseInt(buttonCard3.getText().toString()));
+        int scoreB4 = new Read().viewProgress(Integer.parseInt(buttonCard4.getText().toString()));
+        int scoreB5 = new Read().viewProgress(Integer.parseInt(buttonCard5.getText().toString()));
+        int scoreB6 = new Read().viewProgress(Integer.parseInt(buttonCard6.getText().toString()));
+        int scoreB7 = new Read().viewProgress(Integer.parseInt(buttonCard7.getText().toString()));
+        int scoreB8 = new Read().viewProgress(Integer.parseInt(buttonCard8.getText().toString()));
+        int scoreB9 = new Read().viewProgress(Integer.parseInt(buttonCard9.getText().toString()));
+        int scoreB10 = new Read().viewProgress(Integer.parseInt(buttonCard10.getText().toString()));
+        Button review = (Button) findViewById(R.id.review);
+        buttonCard1.setEnabled(true);
+        buttonCard2.setEnabled(false);
+        buttonCard3.setEnabled(false);
+        buttonCard4.setEnabled(false);
+        buttonCard5.setEnabled(false);
+        buttonCard6.setEnabled(false);
+        buttonCard7.setEnabled(false);
+        buttonCard8.setEnabled(false);
+        buttonCard9.setEnabled(false);
+        buttonCard10.setEnabled(false);
+        review.setEnabled(false);
+
+        if(scoreB1 != 0 ) {
+            buttonCard2.setEnabled(true);
+            buttonCard3.setEnabled(true);
+            review.setEnabled(true);
         }
+        if(scoreB2 !=0 && scoreB3 != 0){
+            buttonCard4.setEnabled(true);
+        }
+        if(scoreB4 != 0){
+            buttonCard5.setEnabled(true);
+            buttonCard6.setEnabled(true);
+            buttonCard7.setEnabled(true);
+        }
+        if(scoreB5 != 0 && scoreB6 != 0 && scoreB7 != 0){
+            buttonCard8.setEnabled(true);
+            buttonCard9.setEnabled(true);
+        }
+        if(scoreB8 != 0 && scoreB9 != 0){
+            buttonCard10.setEnabled(true);
+        }
+
+
     }
 
     private  void  cardGeneretor(){
         int score;
         LinearLayout bar1, bar2, bar3;
 
-        for (x=1;x<13;x++) {
 
-        }
-
-        for (x=1;x<13;x++) {
+        for (x=1;x<11;x++) {
             int idCard = getResources().getIdentifier("card" + x, "id", getPackageName());
 
             score = new Read().getCardStatus(x).getScore();

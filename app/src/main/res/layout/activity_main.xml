@@ -342,7 +342,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Cozinha"
+                                android:text="Férias"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -468,7 +468,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Casa"
+                                android:text="Adjetivos"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -498,8 +498,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
                         android:background="#FFF"
-                        android:orientation="horizontal">
-                    </LinearLayout>
+                        android:orientation="horizontal"></LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -509,77 +508,84 @@
                         android:background="#FFF"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <LinearLayout
-                            android:background="#FFF"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:layout_weight="0.06">
+                            android:layout_weight="0.06"
+                            android:background="#FFF"
+                            android:gravity="center">
+
                             <Button
                                 android:id="@+id/card4"
                                 android:layout_width="90dp"
                                 android:layout_height="90dp"
                                 android:text="4" />
                         </LinearLayout>
+
                         <LinearLayout
-                            android:background="#AAA"
+                            android:id="@+id/starsBar4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:id="@+id/starsBar4">
+                            android:background="#AAA"
+                            android:gravity="center">
+
                             <LinearLayout
-                                android:background="#FFF"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.5"
-                                android:gravity="center">
-                            </LinearLayout>
-                            <LinearLayout
                                 android:background="#FFF"
+                                android:gravity="center"></LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.64"
+                                android:background="#FFF"
                                 android:gravity="center">
+
                                 <LinearLayout
-                                    android:background="#55a44e"
+                                    android:id="@+id/bar1_4"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.65"
-                                    android:gravity="center"
                                     android:layout_marginRight="2dp"
-                                    android:id="@+id/bar1_4">
+                                    android:layout_weight="0.65"
+                                    android:background="#55a44e"
+                                    android:gravity="center">
 
                                 </LinearLayout>
+
                                 <LinearLayout
-                                    android:background="#55a44e"
+                                    android:id="@+id/bar2_4"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.65"
-                                    android:gravity="center"
                                     android:layout_marginRight="2dp"
-                                    android:id="@+id/bar2_4">
+                                    android:layout_weight="0.65"
+                                    android:background="#55a44e"
+                                    android:gravity="center">
 
                                 </LinearLayout>
+
                                 <LinearLayout
+                                    android:id="@+id/bar3_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="0.65"
                                     android:background="#476268"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.65"
-                                    android:gravity="center"
-                                    android:layout_marginRight="2dp"
-                                    android:id="@+id/bar3_4">
+                                    android:gravity="center">
 
                                 </LinearLayout>
 
                             </LinearLayout>
+
                             <LinearLayout
-                                android:background="#FFF"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.5"
-                                android:gravity="center">
-                            </LinearLayout>
+                                android:background="#FFF"
+                                android:gravity="center"></LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -596,7 +602,7 @@
                             android:layout_width="98dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Festa"
+                            android:text="Cozinhar"
                             android:textColor="#000" />
                     </LinearLayout>
 
@@ -727,7 +733,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Comida"
+                                android:text="Pedidos"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -852,7 +858,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Natal"
+                                android:text="Localizações"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -978,7 +984,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Escola"
+                                android:text="Esportes"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -1111,7 +1117,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Sentimentos"
+                                android:text="Interesses"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -1237,7 +1243,7 @@
                                 android:layout_width="98dp"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Ferramentas"
+                                android:text="Comida"
                                 android:textColor="#000" />
                         </LinearLayout>
 
@@ -1358,272 +1364,11 @@
                         android:layout_width="98dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Futebol"
+                        android:text="Corpo Humano"
                         android:textColor="#000" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="148dp"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#7FFFD4"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="148dp"
-                        android:layout_gravity="center"
-                        android:background="#000"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2"
-                            android:background="#FFF"
-                            android:orientation="horizontal">
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="0.1"
-                            android:background="#FFF"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="0.06">
-                                <Button
-                                    android:id="@+id/card11"
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
-                                    android:text="11" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#AAA"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:id="@+id/starsBar11">
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center">
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.39"
-                                    android:gravity="center">
-                                    <LinearLayout
-                                        android:background="#55a44e"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar1_11">
-
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:background="#55a44e"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar2_11">
-
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:background="#476268"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar3_11">
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center">
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2"
-                            android:background="#FFF"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textView"
-                                android:layout_width="98dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Praia"
-                                android:textColor="#000" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#7FFFD4"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="148dp"
-                        android:layout_gravity="center"
-                        android:background="#000"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2"
-                            android:background="#FFF"
-                            android:orientation="horizontal"></LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="0.1"
-                            android:background="#FFF"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:background="#FFF"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="0.06">
-                                <Button
-                                    android:id="@+id/card12"
-                                    android:layout_width="90dp"
-                                    android:layout_height="90dp"
-                                    android:text="12" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:background="#AAA"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:id="@+id/starsBar12">
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center">
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.39"
-                                    android:gravity="center">
-                                    <LinearLayout
-                                        android:background="#55a44e"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar1_12">
-
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:background="#55a44e"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar2_12">
-
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:background="#476268"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="0.65"
-                                        android:gravity="center"
-                                        android:layout_marginRight="2dp"
-                                        android:id="@+id/bar3_12">
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:background="#FFF"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center">
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2"
-                            android:background="#FFF"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textView"
-                                android:layout_width="98dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="CHEGA NATAL"
-                                android:textColor="#000" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

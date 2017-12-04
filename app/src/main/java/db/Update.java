@@ -33,7 +33,7 @@ public class Update {
 
         cv.put("cod", word.getCod());
         cv.put("numerros", word.getNumErros());
-        //cv.put("finish", word.getFinish());
+        cv.put("finish", word.getFinish());
 
         String where = "cod = '" + word.getCod() + "'";
 
@@ -47,7 +47,7 @@ public class Update {
         ContentValues cv = new ContentValues();
 
         cv.put("cod", card.getCod());
-        cv.put("name", "FODASEESSAMERDA");
+        cv.put("name", "card");
         cv.put("score", card.getScore());
 
 

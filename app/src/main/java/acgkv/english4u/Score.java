@@ -11,6 +11,7 @@ import db.Card;
 import db.Read;
 import db.Update;
 import db.User;
+import db.WordEN;
 
 public class Score extends AppCompatActivity {
 
@@ -18,9 +19,10 @@ public class Score extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         int [] result = new int[15];
         int contPonits = 0;
-        int numReward;
+        int numReward, z;
         Card card = new Card();
         User user = new User();
+        WordEN wordEN = new WordEN(1);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
@@ -31,21 +33,36 @@ public class Score extends AppCompatActivity {
         result = extras.getIntArray("result");
         int cardPhase = extras.getInt("card");
 
-
-        for (int i=1; i<17; i++){
+        int p;
+        for (int i=0; i<16; i++){
+            if(cardPhase != 1){
+                z = 16;
+                p = (cardPhase -1);
+            }else {
+                z = 0;
+                p = 0;
+            }
+            wordEN.setFinish(1);
+            wordEN.setCod(((p * z)+i));
             if(result[i]==1){
                 contPonits++;
-
+                wordEN.setNumErros(0);
+                if(new Read().getWordENErros(((p * z)+i)) == 0){
+                    wordEN.setNumErros(0);
+                }else{
+                    wordEN.setNumErros(((new Read().getWordENErros(((p * z)+i))) - 1));
+                }
             }else{
-
+                wordEN.setNumErros(((new Read().getWordENErros(((p * z)+i))) + 1));
             }
+            new Update().updateWord(wordEN);
         }
-        card.setScore(0);
+        int previusScore = new Read().getCardStatus(cardPhase).getScore();
+        card.setScore(previusScore);
         user.setCod(0);
         stars.setText("Sem Estrelas");
         reward.setText("Sem recompensa");
-        int previusScore = new Read().getCardStatus(cardPhase).getScore();
-        if(contPonits>0 && contPonits < 10 ){
+        if(contPonits>0 && contPonits < 10){
             if(previusScore < 1) {
                 card.setScore(1);
                 user.setCoins(5);
@@ -70,7 +87,7 @@ public class Score extends AppCompatActivity {
         if(contPonits>14){
             if(previusScore < 3) {
                 card.setScore(3);
-                user.setCoins(10);
+                user.setCoins(20);
                 stars.setText("3 Estrelas");
                 reward.setText("20 Moedas");
             }else {
@@ -83,7 +100,7 @@ public class Score extends AppCompatActivity {
 
         new Update().updateCard(card);
         new Update().updateUser(user);
-       //new Update().updateWordsEN();
+
         buttonContinue.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 

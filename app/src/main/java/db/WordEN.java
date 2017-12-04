@@ -1,11 +1,14 @@
 package db;
 
-import java.util.Random;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.Random;
 
+import java.util.Random;
 
-public class WordEN {
+
+public class WordEN implements Parcelable {
 
 
     public WordEN(int cod) {
@@ -66,5 +69,15 @@ public class WordEN {
 
     public void setFinish(int finish) {
         this.finish = finish;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 }

@@ -1,23 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="acgkv.english4u.vocabulary">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:background="#FFF"
         android:orientation="horizontal"
         android:layout_weight="1"
-        android:layout_width="368dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:gravity="center_vertical|start"
-            android:text="REVISÃO"/>
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.06"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.07"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s1">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s2">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s3">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s4">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#581845"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/s5">
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.06"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/englishword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cat"
+                    android:textColor="#000"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:background="#0000CD"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.06"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Cachorro" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Gato" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Pão" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.06"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Lebre" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Chapéu" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.06"
+                        android:background="#FFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <Button
+                            android:id="@+id/b5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Boina" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.06"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.43"
+                    android:background="@drawable/round_button"
+                    android:text="OK" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
